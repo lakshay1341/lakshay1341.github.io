@@ -160,748 +160,843 @@
     </style>
 </head>
 <body class="font-sans antialiased text-gray-200 gradient-bg bg-gray-900 transition-colors duration-300">
-    <!-- Header/Navigation -->
-    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm shadow-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-blue-400 flex items-center">
-                    <span class="mr-2">Lakshay</span>
-                    <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Backend Dev</span>
+<!-- Header/Navigation -->
+<header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="text-2xl font-bold text-blue-400 flex items-center">
+                <span class="mr-2">Lakshay</span>
+                <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Backend Dev</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link py-2 text-gray-300">Home</a>
+                <a href="#about" class="nav-link py-2 text-gray-300">About</a>
+                <a href="#skills" class="nav-link py-2 text-gray-300">Skills</a>
+                <a href="#projects" class="nav-link py-2 text-gray-300">Projects</a>
+                <a href="#experience" class="nav-link py-2 text-gray-300">Experience</a>
+                <a href="#resume" class="nav-link py-2 text-gray-300">Resume</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="nav-link py-2 text-gray-300">Home</a>
+                <a href="#about" class="nav-link py-2 text-gray-300">About</a>
+                <a href="#skills" class="nav-link py-2 text-gray-300">Skills</a>
+                <a href="#projects" class="nav-link py-2 text-gray-300">Projects</a>
+                <a href="#experience" class="nav-link py-2 text-gray-300">Experience</a>
+                <a href="#resume" class="nav-link py-2 text-gray-300">Resume</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="py-20 code-bg">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+            <div class="mb-6">
+                <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full font-medium">Backend Developer</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 dark:text-white">Building robust backend systems <span class="text-primary dark:text-blue-400">that scale</span></h1>
+            <p class="text-lg mb-8 text-gray-800 dark:text-gray-300 leading-relaxed">
+                I architect and implement high-performance Java backend solutions with Spring Boot,
+                delivering secure, scalable APIs that power modern applications.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                    View My Work
+                </a>
+                <a href="#contact" class="border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                    <i class="fas fa-paper-plane mr-2"></i> Contact Me
+                </a>
+            </div>
+            <div class="mt-8 flex space-x-4">
+                <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                    <span class="text-sm text-gray-800 dark:text-gray-300">Available for projects</span>
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link py-2 text-gray-300">Home</a>
-                    <a href="#about" class="nav-link py-2 text-gray-300">About</a>
-                    <a href="#skills" class="nav-link py-2 text-gray-300">Skills</a>
-                    <a href="#projects" class="nav-link py-2 text-gray-300">Projects</a>
-                    <a href="#experience" class="nav-link py-2 text-gray-300">Experience</a>
-                    <a href="#resume" class="nav-link py-2 text-gray-300">Resume</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <button class="md:hidden focus:outline-none" id="menu-toggle">
-                        <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="monogram">
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">About <span class="text-primary dark:text-blue-400">Me</span></h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                <div class="w-full max-w-md p-8 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">My Tech Stack</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="tech-icon bg-blue-100 dark:bg-blue-900">
+                            <i class="fab fa-java text-3xl text-blue-600 dark:text-blue-300"></i>
+                        </div>
+                        <div class="tech-icon bg-green-100 dark:bg-green-900">
+                            <i class="fas fa-leaf text-3xl text-green-600 dark:text-green-300"></i>
+                        </div>
+                        <div class="tech-icon bg-purple-100 dark:bg-purple-900">
+                            <i class="fas fa-lock text-3xl text-purple-600 dark:text-purple-300"></i>
+                        </div>
+                        <div class="tech-icon bg-yellow-100 dark:bg-yellow-900">
+                            <i class="fas fa-database text-3xl text-yellow-600 dark:text-yellow-300"></i>
+                        </div>
+                        <div class="tech-icon bg-red-100 dark:bg-red-900">
+                            <i class="fab fa-aws text-3xl text-red-600 dark:text-red-300"></i>
+                        </div>
+                        <div class="tech-icon bg-gray-100 dark:bg-gray-700">
+                            <i class="fab fa-git-alt text-3xl text-gray-600 dark:text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
+                    I'm a backend developer specializing in Java and Spring Boot, currently contributing to enterprise-grade applications at Agavian Software Technologies. With a strong foundation in computer engineering, I focus on building secure, scalable backend systems that power modern web applications.
+                </p>
+                <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
+                    My approach combines technical precision with practical problem-solving. I'm particularly interested in microservices architecture, API design, and performance optimization. I believe in writing clean, maintainable code that stands the test of time.
+                </p>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-6 dark:text-white">My Journey</h3>
+                    <div class="relative pl-8 timeline">
+
+                        <div class="mb-8 relative timeline-item">
+                            <div class="bg-blue-900/50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-300">Java Backend Developer Trainee</h4>
+                                <p class="text-sm text-gray-400">Pentagon Space • June 2024 - Feb 2025</p>
+                                <p class="mt-2 text-gray-300">Gaining hands-on experience with Spring ecosystem and REST API development.</p>
+                            </div>
+                        </div>
+                        <div class="relative timeline-item">
+                            <div class="bg-blue-900/50 p-4 rounded-lg">
+                                <h4 class="font-bold text-blue-300">Junior Software Engineer (Intern)</h4>
+                                <p class="text-sm text-gray-400">Agavian Software Technologies • Mar 2025 - May 2025</p>
+                                <p class="mt-2 text-gray-300">Contributed to enterprise job portal backend with Spring Boot and AWS S3 integration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">My <span class="text-primary dark:text-blue-400">Skills</span></h2>
+
+        <!-- Languages & Frameworks -->
+        <div class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="text-blue-400 mr-3 text-xl">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Languages & Frameworks</h3>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+                <!-- Java -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-red-500">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Java</span>
+                </div>
+
+                <!-- Spring Boot -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-green-500">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Spring Boot</span>
+                </div>
+
+                <!-- Spring JPA -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-500">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Spring JPA</span>
+                </div>
+
+                <!-- Spring Security -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-purple-500">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Spring Security</span>
+                </div>
+
+                <!-- Spring Cloud -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-400">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Spring Cloud</span>
+                </div>
+
+                <!-- REST APIs -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-indigo-500">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">REST APIs</span>
+                </div>
+
+                <!-- MySQL -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-500">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div>
+            <div class="flex items-center mb-8">
+                <div class="text-blue-400 mr-3 text-xl">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Tools & Technologies</h3>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+                <!-- Git -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-600">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Git</span>
+                </div>
+
+                <!-- AWS S3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-yellow-500">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">AWS S3</span>
+                </div>
+
+                <!-- Swagger -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-green-500">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Swagger</span>
+                </div>
+
+                <!-- Jakarta EE -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-600">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Jakarta EE</span>
+                </div>
+
+                <!-- Maven -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-purple-600">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Maven</span>
+                </div>
+
+                <!-- Postman -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-500">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Postman</span>
+                </div>
+
+                <!-- Docker -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-500">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">Docker</span>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
+                    <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-400">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="text-gray-800 dark:text-gray-200">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-white dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Featured <span class="text-primary dark:text-blue-400">Projects</span></h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Healthcare Insurance System -->
+            <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="project-tech-icon bg-blue-900 rounded-lg">
+                            <i class="fab fa-java text-blue-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Healthcare Insurance System</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Spring Boot</span>
+                        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Microservices</span>
+                        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">JWT</span>
+                        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Spring Cloud</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Problem</h4>
+                        <p class="text-sm text-gray-400">Insurance applications required complex processing across multiple departments with varying access levels.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Solution</h4>
+                        <p class="text-sm text-gray-400">Built 12 Spring Boot microservices with JWT authentication, role-based access control, and Spring Cloud for service discovery.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Result</h4>
+                        <p class="text-sm text-gray-400">Reduced processing time by 40% and improved system reliability with circuit breakers and retry mechanisms.</p>
+                    </div>
+                    <div class="flex justify-start items-center mt-6 space-x-4">
+                        <a href="https://github.com/lakshay1341/Healthcare-Insurance-System" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CineTicket -->
+            <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="project-tech-icon bg-purple-900 rounded-lg">
+                            <i class="fas fa-leaf text-purple-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">CineTicket: Movie Reservation System</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Spring Boot</span>
+                        <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Spring Security</span>
+                        <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Stripe API</span>
+                        <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Swagger</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Problem</h4>
+                        <p class="text-sm text-gray-400">Existing movie ticket systems lacked secure payment processing and comprehensive API documentation.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Solution</h4>
+                        <p class="text-sm text-gray-400">Developed RESTful API with Spring Security, JWT authentication, Stripe integration, and Swagger documentation.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-300 mb-1">Result</h4>
+                        <p class="text-sm text-gray-400">Enabled secure online bookings with 99.9% payment success rate and reduced frontend integration time by 50%.</p>
+                    </div>
+                    <div class="flex justify-start items-center mt-6 space-x-4">
+                        <a href="https://cineticket.onrender.com/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> View Live
+                        </a>
+                        <a href="https://github.com/lakshay1341/CineTicket" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banking Web App -->
+            <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="project-tech-icon bg-green-100 dark:bg-green-900 rounded-lg">
+                            <i class="fas fa-university text-green-600 dark:text-green-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold dark:text-white">Banking Web Application</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">JSP</span>
+                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">Servlets</span>
+                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">JDBC</span>
+                        <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">MySQL</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Problem</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Traditional banking systems needed modernization with secure online account management features.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Solution</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Built web application with account management, transaction handling, and complaint submission using JSP and Servlets.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Result</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Enabled 24/7 account access with secure transactions and reduced branch visits by 60%.</p>
+                    </div>
+                    <div class="flex justify-start items-center mt-6 space-x-4">
+                        <a href="https://github.com/lakshay1341/Banking-Web-App" target="_blank" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Bookstore -->
+            <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="project-tech-icon bg-yellow-100 dark:bg-yellow-900 rounded-lg">
+                            <i class="fas fa-book text-yellow-600 dark:text-yellow-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold dark:text-white">Online Bookstore</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">Spring Boot</span>
+                        <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">Spring Security</span>
+                        <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">REST API</span>
+                        <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">MySQL</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Problem</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Independent bookstores needed an affordable online presence with inventory management.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Solution</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Created e-commerce platform with product catalog, user authentication, and order processing.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Result</h4>
+                        <p class="text-sm text-gray-700 dark:text-gray-400">Enabled small bookstores to establish online sales channels with 30% increased revenue.</p>
+                    </div>
+                    <div class="flex justify-start items-center mt-6 space-x-4">
+                        <a href="https://github.com/lakshay1341/online-bookstore" target="_blank" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll">
+            <a href="https://github.com/lakshay1341" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
+                <i class="fab fa-github mr-2"></i> View All Projects on GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Work <span class="text-primary dark:text-blue-400">Experience</span></h2>
+
+        <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden animate-on-scroll">
+            <div class="md:flex">
+                <div class="md:w-1/3 bg-blue-600 dark:bg-blue-800 p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Professional Journey</h3>
+                    <p class="mb-6">Key milestones in my backend development career</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-500 dark:bg-blue-700 p-2 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Fresher</p>
+                            <p class="text-sm opacity-80">Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <div class="relative pl-8 timeline">
+                        <div class="mb-8 relative timeline-item">
+                            <div class="bg-blue-50 dark:bg-blue-900/50 p-6 rounded-lg">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary dark:text-blue-300">Junior Software Engineer (Intern)</h3>
+                                        <p class="text-gray-700 dark:text-gray-400 font-medium">Agavian Software Technologies</p>
+                                    </div>
+                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Mar 2025 - May 2025</span>
+                                </div>
+                                <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
+                                    <li>Developed 15+ REST APIs for enterprise job portal, improving candidate-employer interaction efficiency by 35%</li>
+                                    <li>Implemented AWS S3 file management system reducing document retrieval time from 5s to 500ms</li>
+                                    <li>Designed job lifecycle management system handling 1000+ daily applications with 99.9% uptime</li>
+                                    <li>Created dynamic resume generator supporting PDF exports for 500+ candidate profiles weekly</li>
+                                    <li>Integrated Swagger documentation reducing frontend team onboarding time by 50%</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative timeline-item">
+                            <div class="bg-blue-50 dark:bg-blue-900/50 p-6 rounded-lg">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary dark:text-blue-300">Java Backend Developer Trainee</h3>
+                                        <p class="text-gray-700 dark:text-gray-400 font-medium">Training Program</p>
+                                    </div>
+                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">2023 - 2024</span>
+                                </div>
+                                <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
+                                    <li>Mastered Spring ecosystem including Boot, Security, Data JPA, and Batch processing</li>
+                                    <li>Built 5+ RESTful microservices with JWT authentication and role-based access control</li>
+                                    <li>Optimized SQL queries reducing average response time from 1200ms to 300ms</li>
+                                    <li>Implemented CI/CD pipeline reducing deployment time from 15 minutes to 3 minutes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 text-white">Download <span class="text-blue-400">Resume</span></h2>
+
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 animate-on-scroll">
+            <div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl shadow-lg p-8 h-full">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-lg bg-blue-700 flex items-center justify-center mr-4">
+                        <i class="fas fa-file-pdf text-blue-300 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Professional Resume</h3>
+                </div>
+                <p class="text-gray-300 mb-6">
+                    Download my comprehensive resume to explore my technical skills, professional experience, and project portfolio in detail.
+                </p>
+                <div class="space-y-4">
+                    <a href="lakshay.pdf" download class="block bg-gray-700 hover:bg-gray-600 text-gray-200 px-6 py-3 rounded-lg font-medium transition duration-300 text-center">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+                    <button id="preview-resume-btn" class="w-full bg-blue-700 hover:bg-blue-600 text-gray-200 px-6 py-3 rounded-lg font-medium transition duration-300 text-center">
+                        <i class="fas fa-eye mr-2"></i> Preview Resume
                     </button>
                 </div>
             </div>
-            <!-- Mobile menu -->
-            <div class="md:hidden hidden mt-4" id="mobile-menu">
-                <div class="flex flex-col space-y-3">
-                    <a href="#home" class="nav-link py-2 text-gray-300">Home</a>
-                    <a href="#about" class="nav-link py-2 text-gray-300">About</a>
-                    <a href="#skills" class="nav-link py-2 text-gray-300">Skills</a>
-                    <a href="#projects" class="nav-link py-2 text-gray-300">Projects</a>
-                    <a href="#experience" class="nav-link py-2 text-gray-300">Experience</a>
-                    <a href="#resume" class="nav-link py-2 text-gray-300">Resume</a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="py-20 code-bg">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <div class="mb-6">
-                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full font-medium">Backend Developer</span>
-                </div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 dark:text-white">Building robust backend systems <span class="text-primary dark:text-blue-400">that scale</span></h1>
-                <p class="text-lg mb-8 text-gray-800 dark:text-gray-300 leading-relaxed">
-                    I architect and implement high-performance Java backend solutions with Spring Boot,
-                    delivering secure, scalable APIs that power modern applications.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                        View My Work
-                    </a>
-                    <a href="#contact" class="border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Contact Me
-                    </a>
-                </div>
-                <div class="mt-8 flex space-x-4">
-                    <div class="flex items-center">
-                        <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                        <span class="text-sm text-gray-800 dark:text-gray-300">Available for projects</span>
+            <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                <div class="h-full flex flex-col">
+                    <div class="bg-blue-800 p-4 text-white">
+                        <h3 class="font-bold">Resume Preview</h3>
                     </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="monogram">
-                    <i class="fas fa-code"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white dark:bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">About <span class="text-primary dark:text-blue-400">Me</span></h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
-                    <div class="w-full max-w-md p-8 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">My Tech Stack</h3>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="tech-icon bg-blue-100 dark:bg-blue-900">
-                                <i class="fab fa-java text-3xl text-blue-600 dark:text-blue-300"></i>
-                            </div>
-                            <div class="tech-icon bg-green-100 dark:bg-green-900">
-                                <i class="fas fa-leaf text-3xl text-green-600 dark:text-green-300"></i>
-                            </div>
-                            <div class="tech-icon bg-purple-100 dark:bg-purple-900">
-                                <i class="fas fa-lock text-3xl text-purple-600 dark:text-purple-300"></i>
-                            </div>
-                            <div class="tech-icon bg-yellow-100 dark:bg-yellow-900">
-                                <i class="fas fa-database text-3xl text-yellow-600 dark:text-yellow-300"></i>
-                            </div>
-                            <div class="tech-icon bg-red-100 dark:bg-red-900">
-                                <i class="fab fa-aws text-3xl text-red-600 dark:text-red-300"></i>
-                            </div>
-                            <div class="tech-icon bg-gray-100 dark:bg-gray-700">
-                                <i class="fab fa-git-alt text-3xl text-gray-600 dark:text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
-                        I'm a backend developer specializing in Java and Spring Boot, currently contributing to enterprise-grade applications at Agavian Software Technologies. With a strong foundation in computer engineering, I focus on building secure, scalable backend systems that power modern web applications.
-                    </p>
-                    <p class="text-lg mb-6 text-gray-800 dark:text-gray-300 leading-relaxed">
-                        My approach combines technical precision with practical problem-solving. I'm particularly interested in microservices architecture, API design, and performance optimization. I believe in writing clean, maintainable code that stands the test of time.
-                    </p>
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-6 dark:text-white">My Journey</h3>
-                        <div class="relative pl-8 timeline">
-
-                            <div class="mb-8 relative timeline-item">
-                                <div class="bg-blue-900/50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-blue-300">Java Backend Developer Trainee</h4>
-                                    <p class="text-sm text-gray-400">Pentagon Space • June 2024 - Feb 2025</p>
-                                    <p class="mt-2 text-gray-300">Gaining hands-on experience with Spring ecosystem and REST API development.</p>
-                                </div>
-                            </div>
-                            <div class="relative timeline-item">
-                                <div class="bg-blue-900/50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-blue-300">Junior Software Engineer (Intern)</h4>
-                                    <p class="text-sm text-gray-400">Agavian Software Technologies • Mar 2025 - May 2025</p>
-                                    <p class="mt-2 text-gray-300">Contributed to enterprise job portal backend with Spring Boot and AWS S3 integration.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 gradient-bg">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">My <span class="text-primary dark:text-blue-400">Skills</span></h2>
-
-            <!-- Languages & Frameworks -->
-            <div class="mb-16">
-                <div class="flex items-center mb-8">
-                    <div class="text-blue-400 mr-3 text-xl">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Languages & Frameworks</h3>
-                </div>
-
-                <div class="flex flex-wrap gap-4">
-                    <!-- Java -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-red-500">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Java</span>
-                    </div>
-
-                    <!-- Spring Boot -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-green-500">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Spring Boot</span>
-                    </div>
-
-                    <!-- Spring JPA -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-500">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Spring JPA</span>
-                    </div>
-
-                    <!-- Spring Security -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-purple-500">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Spring Security</span>
-                    </div>
-
-                    <!-- Spring Cloud -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-400">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Spring Cloud</span>
-                    </div>
-
-                    <!-- REST APIs -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-indigo-500">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">REST APIs</span>
-                    </div>
-
-                    <!-- MySQL -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-500">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">MySQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools & Technologies -->
-            <div>
-                <div class="flex items-center mb-8">
-                    <div class="text-blue-400 mr-3 text-xl">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Tools & Technologies</h3>
-                </div>
-
-                <div class="flex flex-wrap gap-4">
-                    <!-- Git -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-600">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Git</span>
-                    </div>
-
-                    <!-- AWS S3 -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-yellow-500">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">AWS S3</span>
-                    </div>
-
-                    <!-- Swagger -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-green-500">
-                            <i class="fas fa-file-code"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Swagger</span>
-                    </div>
-
-                    <!-- Jakarta EE -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-600">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Jakarta EE</span>
-                    </div>
-
-                    <!-- Maven -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-purple-600">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Maven</span>
-                    </div>
-
-                    <!-- Postman -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-orange-500">
-                            <i class="fas fa-paper-plane"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Postman</span>
-                    </div>
-
-                    <!-- Docker -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-500">
-                            <i class="fab fa-docker"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">Docker</span>
-                    </div>
-
-                    <!-- PostgreSQL -->
-                    <div class="bg-white dark:bg-gray-800 rounded-full py-2 px-4 flex items-center shadow-md skill-badge">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2 text-blue-400">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <span class="text-gray-800 dark:text-gray-200">PostgreSQL</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Featured <span class="text-primary dark:text-blue-400">Projects</span></h2>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Healthcare Insurance System -->
-                <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="project-tech-icon bg-blue-900 rounded-lg">
-                                <i class="fab fa-java text-blue-300"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white">Healthcare Insurance System</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Spring Boot</span>
-                            <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Microservices</span>
-                            <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">JWT</span>
-                            <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded">Spring Cloud</span>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Problem</h4>
-                            <p class="text-sm text-gray-400">Insurance applications required complex processing across multiple departments with varying access levels.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Solution</h4>
-                            <p class="text-sm text-gray-400">Built 12 Spring Boot microservices with JWT authentication, role-based access control, and Spring Cloud for service discovery.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Result</h4>
-                            <p class="text-sm text-gray-400">Reduced processing time by 40% and improved system reliability with circuit breakers and retry mechanisms.</p>
-                        </div>
-                        <div class="flex justify-start items-center mt-6 space-x-4">
-                            <a href="https://github.com/lakshay1341/Healthcare-Insurance-System" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CineTicket -->
-                <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="project-tech-icon bg-purple-900 rounded-lg">
-                                <i class="fas fa-leaf text-purple-300"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white">CineTicket: Movie Reservation System</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Spring Boot</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Spring Security</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Stripe API</span>
-                            <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded">Swagger</span>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Problem</h4>
-                            <p class="text-sm text-gray-400">Existing movie ticket systems lacked secure payment processing and comprehensive API documentation.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Solution</h4>
-                            <p class="text-sm text-gray-400">Developed RESTful API with Spring Security, JWT authentication, Stripe integration, and Swagger documentation.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-300 mb-1">Result</h4>
-                            <p class="text-sm text-gray-400">Enabled secure online bookings with 99.9% payment success rate and reduced frontend integration time by 50%.</p>
-                        </div>
-                        <div class="flex justify-start items-center mt-6 space-x-4">
-                            <a href="https://cineticket.onrender.com/" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
-                                <i class="fas fa-external-link-alt mr-2"></i> View Live
-                            </a>
-                            <a href="https://github.com/lakshay1341/CineTicket" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Banking Web App -->
-                <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="project-tech-icon bg-green-100 dark:bg-green-900 rounded-lg">
-                                <i class="fas fa-university text-green-600 dark:text-green-300"></i>
-                            </div>
-                            <h3 class="text-xl font-bold dark:text-white">Banking Web Application</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">JSP</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">Servlets</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">JDBC</span>
-                            <span class="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded">MySQL</span>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Problem</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Traditional banking systems needed modernization with secure online account management features.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Solution</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Built web application with account management, transaction handling, and complaint submission using JSP and Servlets.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Result</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Enabled 24/7 account access with secure transactions and reduced branch visits by 60%.</p>
-                        </div>
-                        <div class="flex justify-start items-center mt-6 space-x-4">
-                            <a href="https://github.com/lakshay1341/Banking-Web-App" target="_blank" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Online Bookstore -->
-                <div class="project-card bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-600 animate-on-scroll">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="project-tech-icon bg-yellow-100 dark:bg-yellow-900 rounded-lg">
-                                <i class="fas fa-book text-yellow-600 dark:text-yellow-300"></i>
-                            </div>
-                            <h3 class="text-xl font-bold dark:text-white">Online Bookstore</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">Spring Boot</span>
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">Spring Security</span>
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">REST API</span>
-                            <span class="text-xs bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-2 py-1 rounded">MySQL</span>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Problem</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Independent bookstores needed an affordable online presence with inventory management.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Solution</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Created e-commerce platform with product catalog, user authentication, and order processing.</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-medium text-gray-800 dark:text-gray-300 mb-1">Result</h4>
-                            <p class="text-sm text-gray-700 dark:text-gray-400">Enabled small bookstores to establish online sales channels with 30% increased revenue.</p>
-                        </div>
-                        <div class="flex justify-start items-center mt-6 space-x-4">
-                            <a href="https://github.com/lakshay1341/online-bookstore" target="_blank" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-12 animate-on-scroll">
-                <a href="https://github.com/lakshay1341" target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
-                    <i class="fab fa-github mr-2"></i> View All Projects on GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 gradient-bg">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Work <span class="text-primary dark:text-blue-400">Experience</span></h2>
-
-            <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden animate-on-scroll">
-                <div class="md:flex">
-                    <div class="md:w-1/3 bg-blue-600 dark:bg-blue-800 p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-4">Professional Journey</h3>
-                        <p class="mb-6">Key milestones in my backend development career</p>
-                        <div class="flex items-center">
-                            <div class="bg-blue-500 dark:bg-blue-700 p-2 rounded-full mr-4">
-                                <i class="fas fa-briefcase text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium">Fresher</p>
-                                <p class="text-sm opacity-80">Experience</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3 p-8">
-                        <div class="relative pl-8 timeline">
-                            <div class="mb-8 relative timeline-item">
-                                <div class="bg-blue-50 dark:bg-blue-900/50 p-6 rounded-lg">
-                                    <div class="flex justify-between items-start">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-primary dark:text-blue-300">Junior Software Engineer (Intern)</h3>
-                                            <p class="text-gray-700 dark:text-gray-400 font-medium">Agavian Software Technologies</p>
-                                        </div>
-                                        <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Mar 2025 - May 2025</span>
-                                    </div>
-                                    <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
-                                        <li>Developed 15+ REST APIs for enterprise job portal, improving candidate-employer interaction efficiency by 35%</li>
-                                        <li>Implemented AWS S3 file management system reducing document retrieval time from 5s to 500ms</li>
-                                        <li>Designed job lifecycle management system handling 1000+ daily applications with 99.9% uptime</li>
-                                        <li>Created dynamic resume generator supporting PDF exports for 500+ candidate profiles weekly</li>
-                                        <li>Integrated Swagger documentation reducing frontend team onboarding time by 50%</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="relative timeline-item">
-                                <div class="bg-blue-50 dark:bg-blue-900/50 p-6 rounded-lg">
-                                    <div class="flex justify-between items-start">
-                                        <div>
-                                            <h3 class="text-xl font-bold text-primary dark:text-blue-300">Java Backend Developer Trainee</h3>
-                                            <p class="text-gray-700 dark:text-gray-400 font-medium">Training Program</p>
-                                        </div>
-                                        <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">2023 - 2024</span>
-                                    </div>
-                                    <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
-                                        <li>Mastered Spring ecosystem including Boot, Security, Data JPA, and Batch processing</li>
-                                        <li>Built 5+ RESTful microservices with JWT authentication and role-based access control</li>
-                                        <li>Optimized SQL queries reducing average response time from 1200ms to 300ms</li>
-                                        <li>Implemented CI/CD pipeline reducing deployment time from 15 minutes to 3 minutes</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-white">Download <span class="text-blue-400">Resume</span></h2>
-
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 animate-on-scroll">
-                <div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-xl shadow-lg p-8 h-full">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-lg bg-blue-700 flex items-center justify-center mr-4">
-                            <i class="fas fa-file-pdf text-blue-300 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Professional Resume</h3>
-                    </div>
-                    <p class="text-gray-300 mb-6">
-                        Download my comprehensive resume to explore my technical skills, professional experience, and project portfolio in detail.
-                    </p>
-                    <div class="space-y-4">
-                        <a href="/docs/lakshay.pdf" download class="block bg-gray-700 hover:bg-gray-600 text-gray-200 px-6 py-3 rounded-lg font-medium transition duration-300 text-center">
-                            <i class="fas fa-download mr-2"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-full flex flex-col">
-                        <div class="bg-blue-800 p-4 text-white">
-                            <h3 class="font-bold">Resume Preview</h3>
-                        </div>
-                        <div class="p-6 flex-grow flex items-center justify-center bg-gray-600">
-                            <div class="text-center">
+                    <div class="p-6 flex-grow flex items-center justify-center bg-gray-600">
+                        <div id="resume-preview" class="w-full h-64 overflow-hidden">
+                            <!-- Resume preview will be loaded here -->
+                            <div class="text-center resume-placeholder">
                                 <i class="fas fa-file-alt text-5xl text-gray-300 mb-4"></i>
-                                <p class="text-gray-400">Preview of my professional resume</p>
+                                <p class="text-gray-400">Click to preview resume</p>
                             </div>
+                            <iframe id="resume-iframe" class="w-full h-full hidden" src=""></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Get In <span class="text-primary dark:text-blue-400">Touch</span></h2>
+<!-- Contact Section -->
+<section id="contact" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 dark:text-white">Get In <span class="text-primary dark:text-blue-400">Touch</span></h2>
 
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 animate-on-scroll">
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-                    <h3 class="text-xl font-bold mb-6 dark:text-white">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-blue-600 dark:text-blue-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800 dark:text-gray-300">Email</h4>
-                                <a href="mailto:lakshaychaudhary2003@gmail.com" class="text-primary dark:text-blue-400">lakshaychaudhary2003@gmail.com</a>
-                            </div>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 animate-on-scroll">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+                <h3 class="text-xl font-bold mb-6 dark:text-white">Contact Information</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
+                            <i class="fas fa-envelope text-blue-600 dark:text-blue-300"></i>
                         </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
-                                <i class="fas fa-phone text-blue-600 dark:text-blue-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800 dark:text-gray-300">Phone</h4>
-                                <a href="tel:+919816641100" class="text-primary dark:text-blue-400">+91 9816641100</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
-                                <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800 dark:text-gray-300">Location</h4>
-                                <p class="text-gray-700 dark:text-gray-400">Himachal Pradesh, India</p>
-                            </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 dark:text-gray-300">Email</h4>
+                            <a href="mailto:lakshaychaudhary2003@gmail.com" class="text-primary dark:text-blue-400">lakshaychaudhary2003@gmail.com</a>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-4 dark:text-white">Connect With Me</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/lakshay1341" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
+                            <i class="fas fa-phone text-blue-600 dark:text-blue-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 dark:text-gray-300">Phone</h4>
+                            <a href="tel:+919816641100" class="text-primary dark:text-blue-400">+91 9816641100</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 dark:text-gray-300">Location</h4>
+                            <p class="text-gray-700 dark:text-gray-400">Himachal Pradesh, India</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-                    <h3 class="text-xl font-bold mb-6 dark:text-white">Send Me a Message</h3>
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-800 dark:text-gray-300 mb-2">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-800 dark:text-gray-300 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-800 dark:text-gray-300 mb-2">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Lakshay</h3>
-                    <p class="text-gray-400 mb-4">Backend Developer specializing in Java and Spring Boot, building secure and scalable systems.</p>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Connect With Me</h3>
                     <div class="flex space-x-4">
-                        <a href="https://github.com/lakshay1341" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-github text-xl"></i>
+                        <a href="https://github.com/lakshay1341" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300">
+                            <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-linkedin-in text-xl"></i>
+                        <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
-                        <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">Projects</a></li>
-                        <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Tech Stack</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Java</span>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Spring Boot</span>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MySQL</span>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">AWS</span>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Docker</span>
-                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Microservices</span>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2024 Lakshay. All rights reserved.</p>
-                <p class="mt-1 text-sm">Built with <i class="fas fa-heart text-red-400"></i> and Spring Boot</p>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+                <h3 class="text-xl font-bold mb-6 dark:text-white">Send Me a Message</h3>
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-800 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-800 dark:text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-800 dark:text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                        Send Message
+                    </button>
+                    <div id="form-status" class="mt-4 text-center hidden">
+                        <p id="success-message" class="text-green-500 hidden">Your message has been sent successfully!</p>
+                        <p id="error-message" class="text-red-500 hidden">There was an error sending your message. Please try again.</p>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Back to top button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-bold text-blue-400 mb-4">Lakshay</h3>
+                <p class="text-gray-400 mb-4">Backend Developer specializing in Java and Spring Boot, building secure and scalable systems.</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/lakshay1341" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+            <div>
+                <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a></li>
+                    <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">Projects</a></li>
+                    <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experience</a></li>
+                </ul>
+            </div>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+            <div>
+                <h4 class="text-lg font-bold mb-4">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Java</span>
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Spring Boot</span>
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MySQL</span>
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">AWS</span>
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Docker</span>
+                    <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Microservices</span>
+                </div>
+            </div>
+        </div>
 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+            <p>&copy; 2024 Lakshay. All rights reserved.</p>
+            <p class="mt-1 text-sm">Built with <i class="fas fa-heart text-red-400"></i> and Spring Boot</p>
+        </div>
+    </div>
+</footer>
 
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+<!-- Back to top button -->
+<button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
+<script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
 
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-        backToTopButton.addEventListener('click', function() {
             window.scrollTo({
-                top: 0,
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
         });
+    });
 
-        // Always use dark mode
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('darkMode', 'enabled');
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
 
-        // Scroll animation
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+            backToTopButton.classList.remove('opacity-100', 'visible');
+            backToTopButton.classList.add('opacity-0', 'invisible');
+        }
+    });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Always use dark mode
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('darkMode', 'enabled');
+
+    // Scroll animation
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Resume Preview Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const previewButton = document.getElementById('preview-resume-btn');
+        const resumePreview = document.getElementById('resume-preview');
+        const resumeIframe = document.getElementById('resume-iframe');
+        const resumePlaceholder = document.querySelector('.resume-placeholder');
+
+        if (previewButton && resumeIframe) {
+            previewButton.addEventListener('click', function() {
+                // Show the iframe and hide the placeholder
+                resumePlaceholder.classList.add('hidden');
+                resumeIframe.classList.remove('hidden');
+
+                // Set the source of the iframe to the PDF file
+                resumeIframe.src = 'lakshay.pdf';
+            });
+
+            // Also make the preview area clickable to show the resume
+            resumePreview.addEventListener('click', function() {
+                if (resumeIframe.classList.contains('hidden')) {
+                    resumePlaceholder.classList.add('hidden');
+                    resumeIframe.classList.remove('hidden');
+                    resumeIframe.src = 'lakshay.pdf';
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }
+    });
 
-        animateElements.forEach(element => {
-            observer.observe(element);
-        });
-    </script>
+    // Contact Form Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+
+                // Validate form data
+                if (!name || !email || !message) {
+                    showError('Please fill in all fields');
+                    return;
+                }
+
+                // In a real application, you would send this data to a server
+                // For now, we'll just simulate a successful submission
+
+                // Show success message
+                formStatus.classList.remove('hidden');
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+
+                // Reset form
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(function() {
+                    formStatus.classList.add('hidden');
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            });
+        }
+
+        function showError(message) {
+            formStatus.classList.remove('hidden');
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            errorMessage.textContent = message;
+
+            // Hide error message after 5 seconds
+            setTimeout(function() {
+                formStatus.classList.add('hidden');
+                errorMessage.classList.add('hidden');
+            }, 5000);
+        }
+    });
+</script>
 </body>
 </html>
