@@ -168,8 +168,8 @@
                 <span class="mr-2">Lakshay</span>
                 <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Backend Dev</span>
             </div>
-            <div class="hidden md:flex items-center">
-                <nav class="flex space-x-8 mr-6">
+            <div class="hidden md:flex items-center justify-between flex-grow ml-10">
+                <nav class="flex space-x-8">
                     <a href="#home" class="nav-link py-2 text-gray-300">Home</a>
                     <a href="#about" class="nav-link py-2 text-gray-300">About</a>
                     <a href="#skills" class="nav-link py-2 text-gray-300">Skills</a>
@@ -177,17 +177,17 @@
                     <a href="#experience" class="nav-link py-2 text-gray-300">Experience</a>
                     <a href="#resume" class="nav-link py-2 text-gray-300">Resume</a>
                 </nav>
-                <div class="flex space-x-4">
+                <div class="flex space-x-6">
                     <a href="https://github.com/lakshay1341" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
-                        <i class="fab fa-github text-xl"></i>
+                        <i class="fab fa-github text-2xl"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
-                        <i class="fab fa-linkedin-in text-xl"></i>
+                        <i class="fab fa-linkedin-in text-2xl"></i>
                     </a>
                 </div>
             </div>
-            <div class="flex items-center space-x-4">
-                <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <div class="flex items-center space-x-4 md:hidden">
+                <button class="focus:outline-none" id="menu-toggle">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -222,8 +222,8 @@
                 <a href="#projects" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
                     View My Work
                 </a>
-                <a href="mailto:lakshaychaudhary2003@gmail.com" class="border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
-                    <i class="fas fa-envelope mr-2"></i> Email Me
+                <a href="#resume" class="border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                    <i class="fas fa-file-alt mr-2"></i> View Resume
                 </a>
             </div>
             <div class="mt-8 flex space-x-4">
@@ -234,8 +234,36 @@
             </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-            <div class="monogram">
-                <i class="fas fa-code"></i>
+            <div class="bg-blue-900/70 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-blue-300 mb-4">Contact Information</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-3">
+                            <i class="fas fa-envelope text-blue-300"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Email</p>
+                            <p class="text-white">lakshaychaudhary2003@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center mr-3">
+                            <i class="fas fa-map-marker-alt text-blue-300"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Location</p>
+                            <p class="text-white">Himachal Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="https://github.com/lakshay1341" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lakshay-3a251b2a7/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -641,7 +669,7 @@
                                         <h3 class="text-xl font-bold text-primary dark:text-blue-300">Junior Software Engineer (Intern)</h3>
                                         <p class="text-gray-700 dark:text-gray-400 font-medium">Agavian Software Technologies</p>
                                     </div>
-                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Mar 2025 - May 2025</span>
+                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full whitespace-nowrap">Mar 2025 - May 2025</span>
                                 </div>
                                 <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
                                     <li>Developed 15+ REST APIs for enterprise job portal, improving candidate-employer interaction efficiency by 35%</li>
@@ -658,9 +686,9 @@
                                 <div class="flex justify-between items-start">
                                     <div>
                                         <h3 class="text-xl font-bold text-primary dark:text-blue-300">Java Backend Developer Trainee</h3>
-                                        <p class="text-gray-700 dark:text-gray-400 font-medium">Training Program</p>
+                                        <p class="text-gray-700 dark:text-gray-400 font-medium">Pentagon Space</p>
                                     </div>
-                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">2023 - 2024</span>
+                                    <span class="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full whitespace-nowrap">Jun 2024 - Feb 2025</span>
                                 </div>
                                 <ul class="mt-4 list-disc list-inside text-gray-800 dark:text-gray-300 space-y-2">
                                     <li>Mastered Spring ecosystem including Boot, Security, Data JPA, and Batch processing</li>
@@ -709,13 +737,14 @@
                         <h3 class="font-bold">Resume Preview</h3>
                     </div>
                     <div class="p-6 flex-grow flex items-center justify-center bg-gray-600">
-                        <div id="resume-preview" class="w-full h-64 overflow-hidden">
+                        <div id="resume-preview" class="w-full h-full overflow-hidden" style="min-height: 400px;">
                             <!-- Resume preview will be loaded here -->
-                            <div class="text-center resume-placeholder">
+                            <div class="text-center resume-placeholder flex flex-col items-center justify-center h-full">
                                 <i class="fas fa-file-alt text-5xl text-gray-300 mb-4"></i>
-                                <p class="text-gray-400">Click to preview resume</p>
+                                <p class="text-gray-400">Loading resume preview...</p>
+                                <div class="mt-4 animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-400"></div>
                             </div>
-                            <iframe id="resume-iframe" class="w-full h-full hidden" src=""></iframe>
+                            <iframe id="resume-iframe" class="w-full h-full hidden" src="" style="min-height: 400px;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -906,24 +935,50 @@
         const resumeIframe = document.getElementById('resume-iframe');
         const resumePlaceholder = document.querySelector('.resume-placeholder');
 
-        if (previewButton && resumeIframe) {
-            previewButton.addEventListener('click', function() {
-                // Show the iframe and hide the placeholder
-                resumePlaceholder.classList.add('hidden');
-                resumeIframe.classList.remove('hidden');
+        // PDF.js viewer URL - this will display the PDF instead of downloading it
+        const pdfViewerUrl = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=';
+        const resumeUrl = 'https://lakshay1341.github.io/docs/lakshay.pdf';
+        const encodedResumeUrl = encodeURIComponent(resumeUrl);
+        const fullPdfViewerUrl = pdfViewerUrl + encodedResumeUrl;
 
-                // Set the source of the iframe to the PDF file
-                resumeIframe.src = 'https://github.com/lakshay1341/lakshay1341.github.io/raw/main/docs/lakshay.pdf';
+        // Function to load the resume in the iframe
+        function loadResume() {
+            resumePlaceholder.classList.add('hidden');
+            resumeIframe.classList.remove('hidden');
+
+            // Use PDF.js viewer to display the PDF
+            resumeIframe.src = fullPdfViewerUrl;
+        }
+
+        if (previewButton && resumeIframe) {
+            // Load resume when preview button is clicked
+            previewButton.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default button behavior
+                loadResume();
             });
 
             // Also make the preview area clickable to show the resume
             resumePreview.addEventListener('click', function() {
                 if (resumeIframe.classList.contains('hidden')) {
-                    resumePlaceholder.classList.add('hidden');
-                    resumeIframe.classList.remove('hidden');
-                    resumeIframe.src = 'https://github.com/lakshay1341/lakshay1341.github.io/raw/main/docs/lakshay.pdf';
+                    loadResume();
                 }
             });
+
+            // Pre-load the resume when the resume section becomes visible
+            const resumeSection = document.getElementById('resume');
+            const resumeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Pre-load the resume after a short delay
+                        setTimeout(loadResume, 500);
+                        resumeObserver.disconnect(); // Only load once
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            resumeObserver.observe(resumeSection);
         }
     });
 
